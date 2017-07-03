@@ -1,0 +1,25 @@
+<% provide(:title, 'Create a Kitten') %>
+
+<h1>New Kitten</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@kitten, url: kittens_path) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :age %>
+      <%= f.number_field :age, class: 'form-control', min: 0 %>
+
+      <%= f.label :cuteness %>
+      <%= f.number_field :cuteness, placeholder: "Between 0 and 10", class: 'form-control', min: 0, max: 10 %>
+
+      <%= f.label :softness %>
+      <%= f.number_field :softness, placeholder: "Between 0 and 10", class: 'form-control', min: 0, max: 10 %>
+
+      <%= f.submit "Create kitten", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

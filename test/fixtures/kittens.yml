@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+joe:
+  name: "Joe"
+  age: 2
+  cuteness: 7
+  softness: 9
+
+fluffy:
+  name: "Fluffy"
+  age: 7
+  cuteness: 4
+  softness: 10

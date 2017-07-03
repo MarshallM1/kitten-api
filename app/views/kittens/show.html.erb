@@ -1,0 +1,24 @@
+<% provide(:title, @kitten.name) %>
+<div class="row">
+  <h1>
+    <%= @kitten.name %>
+  </h1>
+  <h2>
+    Age:
+  </h2>
+    <h3> <%= @kitten.age %> </h3>
+  <h2>
+    Cuteness:
+  </h2>
+    <h3> <%= @kitten.cuteness %> </h3>
+  <h2>
+    Softness:
+  </h2>
+    <h3> <%= @kitten.softness %> </h3>
+
+  <%= link_to "Delete", @kitten, method: :delete,
+                                data: { confirm: "You sure?" } %>
+
+  <%= link_to "Edit", edit_kitten_path(@kitten) %>
+
+</div>
